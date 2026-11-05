@@ -18,7 +18,7 @@ def increment_and_get_visits():
     conn = get_connection()
     try:
         cursor = conn.cursor()
-        # Atomic increment, safe even with several gunicorn workers
+        # Laskurin kasvatus SQL:ssä
         cursor.execute("UPDATE counter SET visits = visits + 1 WHERE id = 1")
         cursor.execute("SELECT visits FROM counter WHERE id = 1")
         visits = cursor.fetchone()[0]
