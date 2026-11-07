@@ -6,8 +6,8 @@ app = Flask(__name__)
 
 REPO_URL = "https://github.com/Jebachu/viikko2-visitor-counter"
 
-# täydennä testin jälkeen
-REBOOT_RESULT = "Not tested yet."
+
+REBOOT_RESULT = "Test passed. I rebooted the virtual machine. The counter showed 13 before the reboot and 14 after it, so the value was kept in the database. The website opened again without any manual steps."
 
 
 def get_connection():
